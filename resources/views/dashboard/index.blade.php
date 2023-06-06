@@ -42,7 +42,7 @@
         <div class="inner">
           <h3>---</h3>
 
-          <p>AGEN ISTIMEWA</p>
+          <p>AGEN ISTIMEWAAAAAAAAAAAAAAA</p>
         </div>
         <div class="icon">
           <i class="ion bi-people-fill"></i>
