@@ -119,7 +119,6 @@
                   	<h4></h4>
                      <h4>Selamat Datang di Website</h4>
                      <p></p>
-                     <h1>Muhammad Ramadhani</h1>
                      <h3>UKM FKIP MENGAJAR ULM</h3>
                      <h4>Muda Berkarya Istimewa</h4>
                      <hr color="white" size="50%" width="98%">
