@@ -9,22 +9,33 @@
         {{ session('success') }}
     </div>
   @endif
-<div class="jumbotron">
 
-  <h5 align="right">
-    <i class="bi bi-star"> PoinFM</i>
-    : {{$poin}}
-  </h5>
+<div class="d-flex flex-row flex-wrap justify-content-center">
+  <div class="p-2">
+    <div class="jumbotron">
 
- 
-  
-  <div class="d-flex justify-content-center"> 
-    <h1 class="display-4"><img src="{{ asset('storage/' . $foto )}}" alt=" " class="rounded-circle" width="150"></h1>
-  </div>
-  
-
-  <h2 align="center" class="m2-4"><?= $nama ?></h2>
-      <h3 align="center" class="">N.A.{{$nomor_anggota}}/UKMFM/{{$angkatan}}/{{$tahun}}</h3>
+      <h5 align="right">
+        <i class="bi bi-star"> PoinFM</i>
+        : {{$poin}}
+      </h5>
+    
+     
+      
+      <div class="d-flex justify-content-center"> 
+        <h1 class="display-4"><img src="{{ asset('storage/' . $foto )}}" alt=" " class="rounded-circle" width="150"></h1>
+      </div>
+      
+    
+      <h2 align="center" class="mb-2"><?= $nama ?></h2>
+      <h3 align="center" class="mb-4">N.A.{{$nomor_anggota}}/UKMFM/{{$angkatan}}/{{$tahun}}</h3>
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary m-2" data-toggle="modal" data-target="#modalEdit">
+        Edit Profil
+        </button>
+        <button type="button" class="btn btn-success m-2" data-toggle="modal" data-target="#editPass" disabled>
+        Ubah Password
+        </button>
+      </div>
     </div>
   </div>
   <div class="p-2"><div class="jumbotron">
@@ -70,16 +81,8 @@
         <td>{{$no_wa}}</td>
       </tr>
     </table>
-  
-    <div class="d-flex justify-content-end">
-      <button type="button" class="btn btn-primary m-2" data-toggle="modal" data-target="#modalEdit">
-      Edit Profil
-      </button>
-      <button type="button" class="btn btn-success m-2" data-toggle="modal" data-target="#editPass" disabled>
-      Ubah Password
-      </button>
-  
-      {{-- MODAL EDIT PROFIL --}}
+
+    {{-- MODAL EDIT PROFIL --}}
     <div class="modal fade" id="editPass" tabindex="-1" role="dialog" aria-labelledby="editPassword" aria-hidden="true">
           <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -112,7 +115,11 @@
   {{-- END MODAL EDIT PROFIL --}}
   
     </div>
+  </div></div>
 </div>
+
+  
+
 </div>
 
 {{-- MODAL EDIT PROFIL --}}
@@ -192,6 +199,7 @@
             </div>
         </div>
         </div>
+        
 {{-- END MODAL EDIT PROFIL --}}
 
 

@@ -135,22 +135,13 @@
 
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('presensi')}}" class="nav-link">
               <i class="nav-icon fas bi-clipboard2"></i>
               <p>
                 Presensi
               </p>
             </a>
           </li>
-          
-          <!--<li class="nav-item">-->
-          <!--  <a href="{{route('presensi')}}" class="nav-link">-->
-          <!--    <i class="nav-icon fas bi-clipboard2"></i>-->
-          <!--    <p>-->
-          <!--      Presensi-->
-          <!--    </p>-->
-          <!--  </a>-->
-          <!--</li>-->
 
           <li class="nav-item">
             <a href="{{ route('inventaris.index')}}" class="nav-link">
