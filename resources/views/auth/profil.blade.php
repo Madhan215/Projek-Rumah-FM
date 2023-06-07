@@ -24,93 +24,94 @@
   
 
   <h2 align="center" class="m2-4"><?= $nama ?></h2>
-  <h3 align="center" class="mb-4">N.A.{{$nomor_anggota}}/UKMFM/{{$angkatan}}/{{$tahun}}</h3>
-  
-
-  <table class="table">
-    <tr>
-      <td>NIM</td>
-      <td> : </td>
-      <td>{{$nim}}</td>
-    </tr>
-    <tr>
-      <td>Program Studi</td>
-      <td> : </td>
-      <td>{{$prodi}}</td>
-    </tr>
-    <tr>
-      <td>Tingkat Agen</td>
-      <td> : </td>
-      <td>{{$status_agen}}</td>
-    </tr>
-    <tr>
-      <td>Departemen</td>
-      <td> : </td>
-      <td>{{$departemen}}</td>
-    </tr>
-    <tr>
-      <td>Jabatan</td>
-      <td> : </td>
-      <td>{{$jabatan}}</td>
-    </tr>
-    <tr>
-      <td>Tempat, Tanggal Lahir</td>
-      <td> : </td>
-      <td>{{$tempat_lahir}}, {{$tanggal_lahir}}</td>
-    </tr>
-    <tr>
-      <td>Email</td>
-      <td> : </td>
-      <td>{{$email}}</td>
-    </tr>
-    <tr>
-      <td>Nomor HP</td>
-      <td> : </td>
-      <td>{{$no_wa}}</td>
-    </tr>
-  </table>
-
-  <div class="d-flex justify-content-end">
-    <button type="button" class="btn btn-primary m-2" data-toggle="modal" data-target="#modalEdit">
-    Edit Profil
-    </button>
-    <button type="button" class="btn btn-success m-2" data-toggle="modal" data-target="#editPass" disabled>
-    Ubah Password
-    </button>
-
-    {{-- MODAL EDIT PROFIL --}}
-  <div class="modal fade" id="editPass" tabindex="-1" role="dialog" aria-labelledby="editPassword" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="editPassword">Ubah Password</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form action="{{ route('editPass', $nim) }}" method="POST">
-                    @method('get')
-                    @csrf
-            <div class="modal-body">
-                    <div class="mb-3">
-                      <label for="userEdit" class="form-label">NIM</label>
-                      <input type="text" class="form-control" name="userEdit" id="userEdit" value="{{$nim}}" disabled>  
-                    </div>
-                    <div class="mb-3">
-                      <label for="passwordEdit" class="form-label">Password Baru</label>
-                      <input type="text" class="form-control" name="passwordEdit" id="passwordEdit">  
-                    </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
-            </div>
-        </div>
-        </div>
-{{-- END MODAL EDIT PROFIL --}}
-
+      <h3 align="center" class="">N.A.{{$nomor_anggota}}/UKMFM/{{$angkatan}}/{{$tahun}}</h3>
+    </div>
   </div>
+  <div class="p-2"><div class="jumbotron">
+    <table class="table">
+      <tr>
+        <td>NIM</td>
+        <td> : </td>
+        <td>{{$nim}}</td>
+      </tr>
+      <tr>
+        <td>Program Studi</td>
+        <td> : </td>
+        <td>{{$prodi}}</td>
+      </tr>
+      <tr>
+        <td>Tingkat Agen</td>
+        <td> : </td>
+        <td>{{$status_agen}}</td>
+      </tr>
+      <tr>
+        <td>Departemen</td>
+        <td> : </td>
+        <td>{{$departemen}}</td>
+      </tr>
+      <tr>
+        <td>Jabatan</td>
+        <td> : </td>
+        <td>{{$jabatan}}</td>
+      </tr>
+      <tr>
+        <td>Tempat, Tanggal Lahir</td>
+        <td> : </td>
+        <td>{{$tempat_lahir}}, {{$tanggal_lahir}}</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td> : </td>
+        <td>{{$email}}</td>
+      </tr>
+      <tr>
+        <td>Nomor HP</td>
+        <td> : </td>
+        <td>{{$no_wa}}</td>
+      </tr>
+    </table>
+  
+    <div class="d-flex justify-content-end">
+      <button type="button" class="btn btn-primary m-2" data-toggle="modal" data-target="#modalEdit">
+      Edit Profil
+      </button>
+      <button type="button" class="btn btn-success m-2" data-toggle="modal" data-target="#editPass" disabled>
+      Ubah Password
+      </button>
+  
+      {{-- MODAL EDIT PROFIL --}}
+    <div class="modal fade" id="editPass" tabindex="-1" role="dialog" aria-labelledby="editPassword" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="editPassword">Ubah Password</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <form action="{{ route('editPass', $nim) }}" method="POST">
+                      @method('get')
+                      @csrf
+              <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="userEdit" class="form-label">NIM</label>
+                        <input type="text" class="form-control" name="userEdit" id="userEdit" value="{{$nim}}" disabled>  
+                      </div>
+                      <div class="mb-3">
+                        <label for="passwordEdit" class="form-label">Password Baru</label>
+                        <input type="text" class="form-control" name="passwordEdit" id="passwordEdit">  
+                      </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+              </div>
+              </form>
+              </div>
+          </div>
+          </div>
+  {{-- END MODAL EDIT PROFIL --}}
+  
+    </div>
 </div>
 </div>
 
