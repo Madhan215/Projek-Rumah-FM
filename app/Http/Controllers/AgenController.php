@@ -36,9 +36,10 @@ class AgenController extends Controller
 
     public function presensi()
     {
+        $kegiatan = DB::table('presensi')->where('nim', auth()->user()->nim)->orderBy('waktu_kegiatan','ASC')->paginate(10);
         $data['title'] = "Presensi";
         $data['sub'] = 'UKM FKIP MENGAJAR ULM';
-        return view('agen.presensi',$data);
+        return view('agen.presensi',$data,['kegiatans' => $kegiatan]);
     }
 
     public function profil(){

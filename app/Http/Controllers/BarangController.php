@@ -72,9 +72,9 @@ class InventarisController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Request $request, string $id)
+    public function edit(string $id)
     {
-        dd($request);
+        //
     }
 
     /**
@@ -85,6 +85,7 @@ class InventarisController extends Controller
 
     public function update(Request $request, string $id)
     {
+        dd($request);
         $kodeInput = $request->input('kode_batangEdit');
         $namaInput = $request->input('nama_barangEdit');
         $jumlahInput = $request->input('jumlahEdit');
