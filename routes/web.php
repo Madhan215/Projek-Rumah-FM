@@ -9,6 +9,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DanusController;
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\PresensiController;
 use App\Http\Controllers\InventarisController;
 use App\Http\Controllers\SuratmasukController;
 use App\Http\Controllers\SuratkeluarController;
@@ -64,8 +65,9 @@ Route::get('/profil',[AgenController::class, 'profil'])->middleware('auth')->nam
 Route::get('/agens',[AgenController::class, 'agen'])->middleware('auth')->name('agens');
 Route::get('/show/{id}',[AgenController::class, 'show'])->middleware('auth')->name('show');
 Route::get('/editPass/{id}',[AgenController::class, 'edit_pass'])->middleware('auth')->name('editPass');
-Route::get('/presensi',[AgenController::class, 'presensi'])->middleware('auth')->name('presensi');
 Route::get('/search',[AgenController::class, 'search'])->middleware('auth')->name('search');
+Route::get('/rekap',[PresensiController::class, 'rekap'])->middleware('auth')->name('rekap');
+Route::get('/hadir',[PresensiController::class, 'hadir'])->middleware('auth')->name('hadir');
 
 //Searching
 Route::get('/searchinv',[InventarisController::class, 'search'])->middleware('auth')->name('searchinv');
@@ -76,11 +78,13 @@ Route::get('/log',[LogController::class, 'index'])->middleware('auth')->name('lo
 
 // Route Admin end
 
-Route::resource('inventaris', InventarisController::class);
+Route::resource('inventaris', InventarisController::class)->middleware('auth');
 
-Route::resource('agen', AgenController::class);
+Route::resource('agen', AgenController::class)->middleware('auth');
 
-Route::resource('agenda', AgendaController::class);
+Route::resource('agenda', AgendaController::class)->middleware('auth');
+
+Route::resource('presensi', PresensiController::class)->middleware('auth');
 
 Route::controller(DanusController::class)->group(function(){
     Route::get('danus','index')->name('danus');
@@ -92,6 +96,9 @@ Route::controller(SuratmasukController::class)->group(function(){
 Route::controller(SuratkeluarController::class)->group(function(){
     Route::get('suratkeluar','index')->name('suratkeluar');
 });
+
+//Export PDF
+Route::get('export/pdf',[PresensiController::class,'exportPDF'])->name('export.pdf');
 
  //Clear route cache
  Route::get('/route-cache', function() {

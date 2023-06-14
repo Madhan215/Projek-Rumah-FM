@@ -64,21 +64,52 @@
                               <li class="<?php if ($active=="home") {echo "active"; }?>">
                                  <a href="{{route('home')}}">Home</a>
                               </li>
-                              <li class="<?php if ($active=="profil") {echo "active"; }?>">
-                                 <a href="{{route('profil_fm')}}">PROFIL</a>
+                              <li class="nav-item dropdown <?php if ($active=="profil") {echo "active"; }?>">
+                                 <a class="nav-link dropdown-toggle" href="" id="profilDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Profil
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="profilDropdown">
+                                    <a class="dropdown-item" href="{{route('profil_fm')}}#ps">Profile singkat</a>
+                                    <a class="dropdown-item" href="{{route('profil_fm')}}#sejarah">Sejarah</a>
+                                    <a class="dropdown-item" href="{{route('profil_fm')}}#makna">Makna Logo</a>
+                                    <a class="dropdown-item" href="{{route('profil_fm')}}#arti">Arti Nama</a>
+                                    <a class="dropdown-item" href="{{route('profil_fm')}}#visi">Visi & Misi</a>
+                                    <a class="nav-link dropdown-toggle" href="" id="pengurusDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       Kepengurusan
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="pengurusDropdown">
+                                       <a class="dropdown-item" href="{{route('profil_fm')}}#2017">2017</a>
+                                       <a class="dropdown-item" href="{{route('profil_fm')}}#2018">2018</a>
+                                       <a class="dropdown-item" href="{{route('profil_fm')}}#2019">2019</a>
+                                       <a class="dropdown-item" href="{{route('profil_fm')}}#2020">2020</a>
+                                       <a class="dropdown-item" href="{{route('profil_fm')}}#2021">2021</a>
+                                       <a class="dropdown-item" href="{{route('profil_fm')}}#2022">2022</a>
+                                    </div>
+                                 </div>
                               </li>
-                              <li class="<?php if ($active=="departemen") {echo "active"; }?>">
-                                 <a href="{{route('departemen_fm')}}">Departemen FM</a>
+                              <li class="nav-item dropdown <?php if ($active=="departemen") {echo "active"; }?>">
+                                 <a class="nav-link dropdown-toggle" href="#" id="profilDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Departemen
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="profilDropdown">
+                                    <a class="dropdown-item" href="{{route('departemen_fm')}}#sc">Steering Committee</a>
+                                    <a class="dropdown-item" href="{{route('departemen_fm')}}#pd">Pengembangan Diri</a>
+                                    <a class="dropdown-item" href="{{route('departemen_fm')}}#pm">Pengabdian Masyarakat</a>
+                                    <a class="dropdown-item" href="{{route('departemen_fm')}}#jm">Jaringan dan Kemitraan</a>
+                                    <a class="dropdown-item" href="{{route('departemen_fm')}}#du">Dana dan Usaha</a>
+                                    <a class="dropdown-item" href="{{route('departemen_fm')}}#sekre">Kesekretariatan</a>
+                                    <a class="dropdown-item" href="{{route('departemen_fm')}}#md">Media dan Informasi</a>
+                                 </div>
                               </li>
                               <li class="<?php if ($active=="prestasi") {echo "active"; }?>">
                                  <a href="{{route('prestasi')}}">Prestasi</a>
                               </li>
-                              <li class="<?php if ($active=="news") {echo "active"; }?>">
+                              {{-- <li class="<?php if ($active=="news") {echo "active"; }?>">
                                  <a href="{{route('news')}}">news</a>
                               </li>
                               <li class="<?php if ($active=="event") {echo "active"; }?>">
                                  <a href="{{route('event')}}">event</a>
-                              </li>
+                              </li> --}}
                               <li>
                                  <a href="{{route('login')}}">Login</a>
                               </li>

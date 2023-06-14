@@ -1,7 +1,7 @@
 @extends('layouts.mainprofil')
 
 @section('container_profil')
-      <div class="section layout_padding">
+      <div class="section layout_padding" id="sc">
          <div class="container">
             
             <div class="row">
@@ -22,7 +22,7 @@
       </div>
  <!-- end section -->
       <!-- section --> 
-      <div class="section layout_padding dark_bg">
+      <div class="section layout_padding dark_bg" id="pd">
       	 <div class="section layout_padding">
          <div class="container">
             
@@ -51,7 +51,7 @@
       <!-- end section -->
 
        <!-- section --> 
-      <div class="section layout_padding">
+      <div class="section layout_padding" id="pm">
          <div class="container">
             
             <div class="row">
@@ -76,7 +76,7 @@
       </div>
  <!-- end section -->
   <!-- section --> 
-      <div class="section layout_padding dark_bg">
+      <div class="section layout_padding dark_bg" id="jm">
          <div class="container">
             
             <div class="row">
@@ -102,14 +102,14 @@
       <!-- end section -->
 
        <!-- section --> 
-      <div class="section layout_padding">
+      <div class="section layout_padding" id="du">
          <div class="container">
             
             <div class="row">
    <div class="col-md-6">
                   <div class="full blog_cont">
                      <h4>Departemen Dana dan Usaha</h4>
-                     <h5h5 class="grey_font">Sept. 2021</h5>
+                     <h5 class="grey_font">Sept. 2021</h5>
                      <p class="black_font">Departemen Dana Usaha (Danus) adalah departemen baru yang terbentuk pada kepengurusan ketiga (Rang-Rang) yang mana dikepalai oleh kepala departemen, sekretaris-bendahara departemen dan anggota, yang mana memiliki tujuan khusus departemen, yakni:
                      	<h4></h4>
                     </p>
@@ -129,7 +129,7 @@
       </div>
  <!-- end section -->
   <!-- section --> 
-      <div class="section layout_padding dark_bg">
+      <div class="section layout_padding dark_bg" id="kesek">
          <div class="container">
             
             <div class="row">
@@ -155,7 +155,7 @@
       <!-- end section -->
 
        <!-- section --> 
-      <div class="section layout_padding">
+      <div class="section layout_padding" id="md">
          <div class="container">
             
             <div class="row">

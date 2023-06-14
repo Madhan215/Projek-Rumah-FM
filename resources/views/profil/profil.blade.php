@@ -15,7 +15,7 @@
 
 
 
-      <div class="section layout_padding">
+      <div class="section layout_padding" id="ps">
          <div class="container">
            
             <div class="row">
@@ -34,7 +34,7 @@
                </div>
                <h4></h4>
                 <section class="project-detail section-padding-half">
-          <div class="container">
+          <div class="container" id="sejarah">
                <div class="row">
                   <h1></h1>
 
@@ -52,7 +52,7 @@
                   </div>
                </div>
             </div>
-             <div class="row margin_top_30">
+             <div class="row margin_top_30" id="arti">
                  <div class="col-md-6">
                   <div class="full blog_cont">
                      <h4></h4>
@@ -73,7 +73,7 @@
                   </div>
                </div>
             </div>
-            <div class="row margin_top_30">
+            <div class="row margin_top_30" id="visi">
                  <div class="col-md-6">
                   <div class="full blog_cont">
                      <h4></h4>
@@ -90,9 +90,9 @@
                   </div>
                </div>
             </div>
-            <div class="row margin_top_30">
+            <div class="row margin_top_30" id="2017">
                <div class="col-md-6">
-                  <img src="{{asset('storage/images/profil/1.jpg')}}" alt="#" />
+                  <img src="{{asset('storage/images/profil/1.jpg')}}" alt="#" width="100%">
                </div>
                <div class="col-md-6">
                   <div class="full blog_cont">
@@ -114,7 +114,7 @@
                <div class="col-md-6">
                   <img src="{{asset('storage/images/profil/2.jpg')}}" alt="#" />
                </div>
-               <div class="col-md-6">
+               <div class="col-md-6" id="2018">
                   <div class="full blog_cont">
                      <h4>Kepengurusan Tahun 2018</h4>
                      <h5>Akad</h5>
@@ -129,11 +129,10 @@
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-       <div class="row margin_top_30">
+         
+       <div class="row margin_top_30" id="2019">
                <div class="col-md-6">
-                  <img src="{{asset('storage/images/profil/3.jpg')}}" alt="#" />
+                  <img src="{{asset('storage/images/profil/3.jpg')}}" alt="#" >
                </div>
                <div class="col-md-6">
                   <div class="full blog_cont">
@@ -150,7 +149,7 @@
                   </div>
                </div>
             </div>
-             <div class="row margin_top_30">
+             <div class="row margin_top_30" id="2020">
                <div class="col-md-6">
                   <img src="{{asset('storage/images/profil/4.jpg')}}" alt="#" />
                </div>
@@ -171,7 +170,7 @@
                   </div>
                </div>
             </div>
-             <div class="row margin_top_30">
+             <div class="row margin_top_30" id="2021">
                <div class="col-md-6">
                   <img src="{{asset('storage/images/profil/5.jpg')}}" alt="#" />
                </div>
@@ -193,11 +192,11 @@
                      <p>.</p>
                   </div>
                </div>
-                <div class="row margin_top_30">
+                <div class="row margin_top_30" id="2022">
                <div class="col-md-6">
-                  <img src="{{asset('storage/images/profil/Original-IMG_7078.JPG')}}" alt="#" />
+                  <img src="{{asset('storage/images/profil/6.JPG')}}" alt="#" />
                </div>
-               <div class="col-md-6">
+               <div class="col-md-6" id="2022">
                   <div class="full blog_cont">
                      <h4>Kepengurusan Tahun 2022</h4>
                      <h5>Sinovac</h5>
@@ -216,4 +215,6 @@
                   </div>
                </div>
             </div>
+            </div>
+      </div>
 @endsection

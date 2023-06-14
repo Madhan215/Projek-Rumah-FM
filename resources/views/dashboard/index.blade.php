@@ -10,7 +10,7 @@
       <!-- small box -->
       <div class="small-box bg-info">
         <div class="inner">
-          <h3>---</h3>
+          <h3>136</h3>
 
           <p>AGEN MUDA</p>
         </div>
@@ -25,7 +25,7 @@
       <!-- small box -->
       <div class="small-box bg-success">
         <div class="inner">
-          <h3>---</h3>
+          <h3>63</h3>
 
           <p>AGEN BERKARYA</p>
         </div>
@@ -40,7 +40,7 @@
       <!-- small box -->
       <div class="small-box bg-warning">
         <div class="inner">
-          <h3>---</h3>
+          <h3>176</h3>
 
           <p>AGEN ISTIMEWA</p>
         </div>
@@ -55,7 +55,7 @@
       <!-- small box -->
       <div class="small-box bg-danger">
         <div class="inner">
-          <h3>---</h3>
+          <h3>342</h3>
 
           <p>ALUMNI AGEN</p>
         </div>

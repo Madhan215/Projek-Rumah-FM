@@ -41,7 +41,7 @@
 
       <div class="row">
          <div class="col-md-6">
-            <img src="images/pamflet_oprec_2022_fix.png" alt="Pamflet Oprec 2022" />
+            <img src="{{asset('storage/images/profil/pamflet_oprec_2022_fix.png')}}" alt="Pamflet Oprec 2022" />
             <h5 class="grey_font">Pamflet Open Recuiretment 2022</h5>
          </div>
          <div class="col-md-6">
@@ -96,29 +96,6 @@
             
             </table>
             <br>
-            <div class="mapouter">
-               <div class="gmap_canvas"><iframe width="100%" height="400px" id="gmap_canvas"
-                     src=""
-                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                     href="https://123movies-to.org"></a><br>
-                  <style>
-                     .mapouter {
-                        position: relative;
-                        text-align: right;
-                        height: 400px;
-                        width: 100%;
-                     }
-                  </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
-                  <style>
-                     .gmap_canvas {
-                        overflow: hidden;
-                        background: none !important;
-                        height: 400px;
-                        width: 100%;
-                     }
-                  </style>
-               </div>
-            </div>
             <br>
             <p style="color: white;">
 
@@ -235,7 +212,7 @@
 
          <div class="row">
             <div class="col-md-6">
-               <img src="images/pamfletfix.jpg" alt="Pamflet Semnas 2022" />
+               <img src="{{asset('storage/images/profil/pamfletfix.jpg')}}" alt="Pamflet Semnas 2022" />
                <h5 class="grey_font">Pamflet Seminar Nasional 2022</h5>
             </div>
             <div class="col-md-6">

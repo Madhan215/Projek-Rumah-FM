@@ -135,7 +135,7 @@
 
 
           <li class="nav-item">
-            <a href="{{route('presensi')}}" class="nav-link">
+            <a href="{{route('presensi.index')}}" class="nav-link">
               <i class="nav-icon fas bi-clipboard2"></i>
               <p>
                 Presensi
