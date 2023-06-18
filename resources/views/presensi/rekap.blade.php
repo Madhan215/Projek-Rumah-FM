@@ -14,7 +14,7 @@
     <tr>
       <th scope="col" style="width: 45%">Nama</th>
       <th scope="col" style="width: 45%">NIM</th>
-      <th scope="col" style="width: 10%">Aksi</th>
+      <th scope="col" style="width: 10%">Keterangan</th>
     </tr>
   </thead>
   <tbody>

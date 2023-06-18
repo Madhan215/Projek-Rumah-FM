@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\ValidationException;
 
 
 class AgenController extends Controller
@@ -56,15 +57,27 @@ class AgenController extends Controller
         return view('auth.profil',$data);
     }
 
+    public function laman_edit_pass(){
+        $data['title'] = "Update Password";
+        $data['sub'] = auth()->user()->nama;
+        $data['nim'] = auth()->user()->nim;
+        return view('auth.pass',$data);
+    }
+
     public function edit_pass(Request $request, string $id){
-        $query = DB::table('users')->where('nim', $id)->update([
-            'password' => Hash::make($request->get('password'))
+        //dd($request, $id);
+        $request->validate([
+            'passwordLama' => ['required'],
+            'password' => ['required', 'min:8', 'confirmed']
         ]);
-        if ($query) {
-            return redirect()->route('profil')->with('success', 'Password Berhasil Diupdate');
-        } else {
-            return redirect()->route('profil')->with('failed', 'Password Gagal Diupdate');
+        if(Hash::check($request->passwordLama, auth()->user()->password)){
+            auth()->user()->update(['password' => Hash::make($request->password)]);
+            return redirect()->route('editpassword')->with('success', 'Password Berhasil Diupdate');
         }
+
+        throw ValidationException::withMessages([
+            'passwordLama' => 'Password Lama Anda Tidak Sesuai'
+        ]);
     }
 
     /**

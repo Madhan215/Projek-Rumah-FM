@@ -14,10 +14,10 @@
   <div class="p-2">
     <div class="jumbotron">
 
-      <h5 align="right">
+      {{-- <h5 align="right">
         <i class="bi bi-star"> PoinFM</i>
         : {{$poin}}
-      </h5>
+      </h5> --}}
     
      
       
@@ -32,9 +32,7 @@
         <button type="button" class="btn btn-primary m-2" data-toggle="modal" data-target="#modalEdit">
         Edit Profil
         </button>
-        <button type="button" class="btn btn-success m-2" data-toggle="modal" data-target="#editPass" disabled>
-        Ubah Password
-        </button>
+        <a class="btn btn-success m-2" href="{{route('editpassword')}}">Ubah Password</a>
       </div>
     </div>
   </div>
@@ -97,13 +95,27 @@
                       @csrf
               <div class="modal-body">
                       <div class="mb-3">
-                        <label for="userEdit" class="form-label">NIM</label>
-                        <input type="text" class="form-control" name="userEdit" id="userEdit" value="{{$nim}}" disabled>  
+                        <label for="passwordLama" class="form-label">Password Lama</label>
+                        <input type="text" class="form-control" name="passwordLama" id="passwordLama" autocomplete="new-password">  
+                        @error("passwordEdit_konfirmasi")
+                        <div class="text-red-500 mt-2 text-sm">{{$message}}</div>
+                        @enderror
                       </div>
                       <div class="mb-3">
                         <label for="passwordEdit" class="form-label">Password Baru</label>
-                        <input type="text" class="form-control" name="passwordEdit" id="passwordEdit">  
+                        <input type="password" class="form-control" name="passwordEdit" id="passwordEdit" autocomplete="new-password">
+                        @error("passwordEdit_konfirmasi")
+                        <div class="text-red-500 mt-2 text-sm">{{$message}}</div>
+                        @enderror  
                       </div>
+                      <div class="mb-3">
+                        <label for="passwordEdit_konfirmasi" class="form-label">Konfirmasi Password Baru</label>
+                        <input type="password" class="form-control" name="passwordEdit_konfirmasi" id="passwordEdit_konfirmasi">  
+                        @error("passwordEdit_konfirmasi")
+                        <div class="text-red-500 mt-2 text-sm">{{$message}}</div>
+                        @enderror
+                      </div>
+              </div>
               <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   <button type="submit" class="btn btn-primary">Simpan</button>

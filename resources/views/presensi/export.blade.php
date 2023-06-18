@@ -15,6 +15,7 @@
     </style>
 </head>
 <body>
+    <h3 align="right">Tanggal : {{date('d-m-Y')}}</h3>
     <h1>Rekap Presensi</h1>
     <table>
         <thead>
@@ -27,12 +28,12 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($data as $mahasiswa)
+            @foreach ($data as $dt)
                 <tr>
-                    <td>{{ $mahasiswa->id }}</td>
-                    <td>{{ $mahasiswa->nama_agen }}</td>
-                    <td>{{ $mahasiswa->nim }}</td>
-                    <td>{{ $mahasiswa->keterangan }}</td>
+                    <td>{{ $dt->id }}</td>
+                    <td>{{ $dt->nama_agen }}</td>
+                    <td>{{ $dt->nim }}</td>
+                    <td>{{ $dt->keterangan }}</td>
                     <!-- Tambahkan kolom sesuai dengan struktur tabel Anda -->
                 </tr>
             @endforeach

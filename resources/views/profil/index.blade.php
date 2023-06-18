@@ -3,14 +3,14 @@
 @section('container_profil')
 
 <div class="container">
-   <div class="row p-4 ">
-   <div class="col-4">
+   <div class="p-4 ">
+   <div class="">
       <h2>Selamat Datang di Website</h2>
       <h3>UKM FKIP MENGAJAR ULM</h3>
       <h4>"Muda Berkarya Istimewa"</h4>
       <hr color="white" size="50%" width="98%">
    </div>
-   <div class="col-8">
+   <div class="">
         <!-- revolution slider -->
         <div class="">
          <div class="">

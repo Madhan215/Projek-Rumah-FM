@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AuthController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         if($user = Auth::user()){
             return redirect()->route('dashboard');
         }
@@ -33,6 +33,7 @@ class AuthController extends Controller
         
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
+
             $nama = auth()->user()->nama;
             $nim = auth()->user()->nim;
             $waktu = date('Y-m-d H:i:s');

@@ -65,6 +65,7 @@ Route::get('/profil',[AgenController::class, 'profil'])->middleware('auth')->nam
 Route::get('/agens',[AgenController::class, 'agen'])->middleware('auth')->name('agens');
 Route::get('/show/{id}',[AgenController::class, 'show'])->middleware('auth')->name('show');
 Route::get('/editPass/{id}',[AgenController::class, 'edit_pass'])->middleware('auth')->name('editPass');
+Route::get('/editpassword',[AgenController::class, 'laman_edit_pass'])->middleware('auth')->name('editpassword');
 Route::get('/search',[AgenController::class, 'search'])->middleware('auth')->name('search');
 Route::get('/rekap',[PresensiController::class, 'rekap'])->middleware('auth')->name('rekap');
 Route::get('/hadir',[PresensiController::class, 'hadir'])->middleware('auth')->name('hadir');

@@ -242,6 +242,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
+            <a class="text-lg" href="{{ url()->previous() }}"><h1><i class="bi bi-arrow-left-square-fill"></i></h1></a>
             <h1>{{$title}} | <small>{{$sub}}</small></h1>
           </div>
         </div>

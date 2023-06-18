@@ -25,10 +25,21 @@
   <?php endforeach; ?>
 </table>
 
-{{-- Start Link Paginate --}}
-<div class="d-flex justify-content-end">
-  {{$logs->links()}}
+<div class="d-flex">
+  <div class="p-2">
+    <a class="btn btn-primary mt-2" href="{{ url()->previous() }}">Kembali</a>
+  </div>
+  <div class="ml-auto p-2">
+    <div class="d-flex justify-content-end">
+      {{$logs->links()}}
+    </div>
+  </div>
 </div>
+
+
+{{-- Start Link Paginate --}}
+
+
 {{-- End Link Paginate --}}
 
 {{-- Start Script --}}

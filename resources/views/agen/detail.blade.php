@@ -6,10 +6,10 @@
 
   <div class="jumbotron">
 
-  <h5 align="right">
+  {{-- <h5 align="right">
     <i class="bi bi-star"> PoinFM</i>
     : {{$poin}}
-  </h5>
+  </h5> --}}
 
  
   

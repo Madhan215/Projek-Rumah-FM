@@ -37,8 +37,11 @@ class PresensiController extends Controller
 
     public function exportPDF(){
         $data = DB::table("presensi")->get();
+        $nama_kegiatan = DB::table("presensi")->where('nim','2110131210003')->value('nama');
+        //dd($nama_kegiatan);
+        //return view('presensi.export',['data' => $data]);
         $pdf = PDF::loadView('presensi.export', compact('data'));
-        return $pdf->download('Rekap Kegiatan.pdf');
+        return $pdf->download('Rekap Presensi '. $nama_kegiatan . '.pdf');
     }
 
 

@@ -36,6 +36,16 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+      .header-section {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+
+    </style>
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -45,7 +55,7 @@
       </div>
       <!-- end loader -->
       <!-- header -->
-      <header>
+<header class="header-section">
          <!-- header inner -->
          <div class="container-fluid">
             <div class="row">
@@ -135,16 +145,18 @@
        <!-- end section -->
       <!-- footer -->
       <footer>
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-4 col-md-6">
-                  <a href="#"><img src="{{ asset('storage/images/profil/FKIP MENGAJAR JPG.png')}}" alt="#" /></a>
+            <div class="d-flex align-items-center flex-wrap p-2">
+               <div class="p-2 mr-5">
+                  <img src="{{ asset('storage/images/profil/FKIP MENGAJAR JPG.png')}}" alt="#" />
+               </div>
+               <div class="p-2">
                   <ul class="contact_information">
                      <li><span><img src="{{ asset('storage/images/profil/location_icon.png')}}" alt="#" /></span><span class="text_cont">Kampus Fakultas Keguruan dan Ilmu Pendidikan<br>Universitas Lambung Mangkurat<br>Banjarmasin Kalimantan Selatan</span></li>
                      <li><span><img src="{{ asset('storage/images/profil/phone_icon.png')}}" alt="#" /></span><span class="text_cont">085753269130<br>083139113438</span></li>
                      <li><span><img src="{{ asset('storage/images/profil/mail_icon.png')}}" alt="#" /></span><span class="text_cont">fkipmengajar@ulm.ac.id</span></li>
-                 </div>
                   </ul>
+               </div>
+               <div class="p-2">
                   <ul class="social_icon">
                      <li><a href="https://web.facebook.com/UKMFKIPMENGAJARULM" target="_blank"><i class="bi bi-facebook"></i></a></li>
                      <li><a href="https://www.instagram.com/fkipmengajarulm" target="_blank"><i class="bi bi-instagram"></i></a></li>
@@ -152,13 +164,9 @@
                      <li><a href="https://www.tiktok.com/@fkipmengajarulm" target="_blank"><i class="bi bi-tiktok"></i></a></li>
                   </ul>
                </div>
-                        </fieldset>
-                     </form>
-                  </div>
-               </div>
             </div>
-         </div>
       </footer>
+      
       <div class="cpy">
          <div class="container">
             <div class="row">
